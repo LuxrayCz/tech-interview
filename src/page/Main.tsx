@@ -13,7 +13,7 @@ const columns = [
     title: "Gender",
   },
   {
-    title: "Ability69",
+    title: "Ability",
   },
   {
     title: "Minimal Distance",
@@ -45,9 +45,10 @@ const Main = () => {
     fetchData();
   }, []);
 
+  // Delete data from db and front-end
   const deleteData = async (index: number) => {
-    await axios.delete("http://localhost:3500/items/" + (index + 1));
-    console.log(data);
+    setData((prev)=> prev?.filter((oneData)=> oneData.id !== index))
+    await axios.delete("http://localhost:3500/items/" + (index));
   };
 
   return (
