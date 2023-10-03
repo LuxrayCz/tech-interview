@@ -1,5 +1,5 @@
 type DataType = {
-  id: number,
+  id: number;
   data: {
     ID: string;
     Name: string;
@@ -41,3 +41,6 @@ type DataType = {
     };
   };
 };
+
+type DeleteChildrenType = (recordId: string, characterId: string) => Promise<void>;
+type DeleteRecordType = (rowIndex: number, recordId: string, recordChildrenId: string) => Promise<void>;

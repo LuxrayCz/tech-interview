@@ -1,6 +1,49 @@
 {
   "items": [
     {
+      "id": 1,
+      "data": {
+        "ID": "44",
+        "Name": "Trillian",
+        "Gender": "female",
+        "Ability": "mathematician",
+        "Minimal_Distance": "6.2000000000",
+        "Weight": "49",
+        "Born": "Mon Dec 14 00:00:00 CET 1994",
+        "In_Space_Since": "Wed Dec 24 17:21:50 CET 2014",
+        "Beer_Consumption": "6704",
+        "Knows_the_Answer": "true"
+      },
+      "children": {
+        "has_nemesis": {
+          "records": [
+            {
+              "data": {
+                "ID": "1007",
+                "Character_Id": "44",
+                "Is_Alive": "true",
+                "Years": "29"
+              },
+              "children": {
+                "has_secrete": {
+                  "records": [
+                    {
+                      "data": {
+                        "ID": "2008",
+                        "Nemesis_id": "1007",
+                        "Secrete_code": "1799820570"
+                      },
+                      "children": {}
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
       "id": 2,
       "data": {
         "ID": "48",
@@ -31,6 +74,73 @@
         "Knows_the_Answer": "true"
       },
       "children": {}
+    },
+    {
+      "id": 4,
+      "data": {
+        "ID": "52",
+        "Name": "Ford Prefect",
+        "Gender": "M",
+        "Ability": "has_towel",
+        "Minimal_Distance": "0.8000000000",
+        "Weight": "107",
+        "Born": "Thu May 41 00:00:00 CET 2001",
+        "In_Space_Since": "Sun Dec 21 11:57:06 CET 2014",
+        "Beer_Consumption": "62544",
+        "Knows_the_Answer": "true"
+      },
+      "children": {
+        "has_nemesis": {
+          "records": [
+            {
+              "data": {
+                "ID": "1684",
+                "Character_Id": "52",
+                "Is_Alive": "true",
+                "Years": "28"
+              },
+              "children": {
+                "has_secrete": {
+                  "records": [
+                    {
+                      "data": {
+                        "ID": "1404",
+                        "Nemesis_id": "1684",
+                        "Secrete_code": "5464826016"
+                      },
+                      "children": {}
+                    },
+                    {
+                      "data": {
+                        "ID": "1415",
+                        "Nemesis_id": "1684",
+                        "Secrete_code": "6270976449"
+                      },
+                      "children": {}
+                    },
+                    {
+                      "data": {
+                        "ID": "2505",
+                        "Nemesis_id": "1684",
+                        "Secrete_code": "7899028241"
+                      },
+                      "children": {}
+                    },
+                    {
+                      "data": {
+                        "ID": "4479",
+                        "Nemesis_id": "1684",
+                        "Secrete_code": "9442445871"
+                      },
+                      "children": {}
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
     },
     {
       "id": 5,
