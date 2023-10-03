@@ -13,7 +13,7 @@ const columns = [
     title: "Gender",
   },
   {
-    title: "Ability",
+    title: "Ability69",
   },
   {
     title: "Minimal Distance",
