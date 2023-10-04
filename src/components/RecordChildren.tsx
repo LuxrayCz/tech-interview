@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { Loader2, X } from "lucide-react";
 
 type RecordChildrenType = {
   data: {
@@ -14,18 +14,35 @@ interface Props {
   index: number;
   rowIndex: number;
   deleteRecord: DeleteRecordType;
+  loadings: Loadings;
 }
-const RecordChildren = ({ recordChildren, index, rowIndex, deleteRecord }: Props) => {
+const RecordChildren = ({
+  recordChildren,
+  index,
+  rowIndex,
+  deleteRecord,
+  loadings,
+}: Props) => {
   return (
     <div
-      className={`grid grid-cols-4 place-items-center py-2 text-white  text-center space-x-10 ${index % 2 === 0 ? "bg-gray-600" : "bg-gray-900"} `}
+      className={`grid grid-cols-4 place-items-center py-2 text-white  text-center space-x-10 ${
+        index % 2 === 0 ? "bg-gray-600" : "bg-gray-900"
+      } `}
     >
       <p>{recordChildren.data.ID}</p>
       <p>{recordChildren.data.Nemesis_id}</p>
       <p>{recordChildren.data.Secrete_code}</p>
-      <div className="cursor-pointer" onClick={() => deleteRecord(rowIndex, recordChildren.data.Nemesis_id, recordChildren.data.ID)}>
-        <X className="h-7 w-7" />
-      </div>
+      <button
+        disabled={loadings.recordIsLoading}
+        className="cursor-pointer"
+        onClick={() => deleteRecord(rowIndex, recordChildren.data.ID)}
+      >
+        {loadings.recordIsLoading ? (
+          <Loader2 className="h-7 w-7 animate-spin" />
+        ) : (
+          <X className="h-7 w-7" />
+        )}
+      </button>
     </div>
   );
 };

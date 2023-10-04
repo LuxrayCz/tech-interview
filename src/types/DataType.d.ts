@@ -43,4 +43,9 @@ type DataType = {
 };
 
 type DeleteChildrenType = (recordId: string, characterId: string) => Promise<void>;
-type DeleteRecordType = (rowIndex: number, recordId: string, recordChildrenId: string) => Promise<void>;
+type DeleteRecordType = (rowIndex: number,  recordChildrenId: string) => Promise<void>;
+type  Loadings = {
+  rowIsLoading: boolean;
+  childrenIsLoading: boolean;
+  recordIsLoading: boolean;
+}
