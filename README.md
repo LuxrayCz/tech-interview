@@ -1,6 +1,5 @@
 # Hierarchy table
 
-Front-end Technical Assessment
 How to run:
 
 1.  npm install
